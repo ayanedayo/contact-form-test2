@@ -1,0 +1,151 @@
+/* ベース */
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* 中央の器 */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ヘッダー */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    z-index: 10;
+}
+.site-logo {
+    text-decoration: none;
+    color: #F3A81E;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.site-logo:hover {
+    opacity: .9; }
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    /* ← ヘッダーの高さを明示 */
+}
+
+.logo {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #f0b21a;
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* メインの上余白（ヘッダーとかぶらないように） */
+.site-main {
+    padding: 24px 0 40px;
+}
+
+/* 見出し＋右上ボタン */
+.page-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin: 8px 0 16px;
+}
+
+.page-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+}
+
+/* 2カラムレイアウト */
+.page {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 32px;
+}
+
+/* ボタン */
+.btn-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 8px;
+    background: #f5b316;
+    color: #3b3b3b;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(245, 179, 22, .3);
+}
+
+.btn-add:hover {
+    opacity: .9;
+}
+
+/* 検索UI */
+.search-form .field input {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    padding: 0 16px;
+}
+
+.btn-search {
+    width: 100%;
+    height: 48px;
+    margin: 16px 0 20px;
+    border: none;
+    border-radius: 10px;
+    background: #f5b316;
+    color: #3b3b3b;
+    font-weight: 700;
+    box-shadow: 0 6px 14px rgba(245, 179, 22, .25);
+}
+
+.caption {
+    font-weight: 700;
+    margin: 8px 0 6px;
+}
+
+.select {
+    width: 100%;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #e5e5e5;
+    padding: 0 12px;
+}
+
+/* レスポンシブ */
+@media (max-width: 900px) {
+    .page {
+        grid-template-columns: 1fr;
+    }
+
+    .page-head {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
